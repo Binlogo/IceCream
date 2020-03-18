@@ -1,0 +1,152 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Manifest.swift",
+      "line": 16,
+      "symbol": "IceCream.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Notification+Name.swift",
+      "line": 14,
+      "symbol": "NotificationName.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Notification+Name.swift",
+      "line": 18,
+      "symbol": "RawRepresentable.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/PrivateDatabaseManager.swift",
+      "line": 194,
+      "symbol": "PrivateDatabaseManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncEngine.swift",
+      "line": 104,
+      "symbol": "IceCreamKey.zoneChangesTokenKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncEngine.swift",
+      "line": 108,
+      "symbol": "IceCreamKey.hasCustomZoneCreatedKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncEngine.swift",
+      "line": 121,
+      "symbol": "IceCreamSubscription.cloudKitPrivateDatabaseSubscriptionID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncEngine.swift",
+      "line": 122,
+      "symbol": "IceCreamSubscription.cloudKitPublicDatabaseSubscriptionID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncEngine.swift",
+      "line": 128,
+      "symbol": "IceCreamSubscription.allIDs",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 26,
+      "symbol": "SyncObject.realmConfiguration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 28,
+      "symbol": "SyncObject.init(realmConfiguration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 41,
+      "symbol": "SyncObject.zoneID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 62,
+      "symbol": "SyncObject.isCustomZoneCreated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 72,
+      "symbol": "SyncObject.add(record:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 92,
+      "symbol": "SyncObject.delete(recordID:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/SyncObject.swift",
+      "line": 133,
+      "symbol": "SyncObject.cleanUp()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Syncable.swift",
+      "line": 18,
+      "symbol": "Syncable.zoneID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Syncable.swift",
+      "line": 22,
+      "symbol": "Syncable.isCustomZoneCreated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Syncable.swift",
+      "line": 26,
+      "symbol": "Syncable.cleanUp()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Syncable.swift",
+      "line": 27,
+      "symbol": "Syncable.add(record:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Binboy/Documents/GitHub/IceCream/IceCream/Classes/Syncable.swift",
+      "line": 28,
+      "symbol": "Syncable.delete(recordID:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Binboy/Documents/GitHub/IceCream"
+}

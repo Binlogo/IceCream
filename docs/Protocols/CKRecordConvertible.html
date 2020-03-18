@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CKRecordConvertible Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/CKRecordConvertible" class="dashAnchor"></a>
+
+    <a title="CKRecordConvertible Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          IceCream Docs
+        </a>
+         (72% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">IceCream Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      CKRecordConvertible Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CreamAsset.html">CreamAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IceCream.html">IceCream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SyncEngine.html">SyncEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SyncObject.html">SyncObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/IceCreamKey.html">IceCreamKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/IceCreamSubscription.html">IceCreamSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Notifications.html">Notifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CKRecordConvertible.html">CKRecordConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:8IceCream19CKRecordRecoverableP">CKRecordRecoverable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NotificationName.html">NotificationName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Syncable.html">Syncable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>CKRecordConvertible</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">CKRecordConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>The protocol for Realm&rsquo;s Object to convert to CKRecord.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertibleP10recordTypeSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/recordType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertibleP10recordTypeSSvpZ">recordType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Realm object type of the record</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">recordType</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertibleP6zoneIDSo0c4ZoneF0CvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/zoneID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertibleP6zoneIDSo0c4ZoneF0CvpZ">zoneID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique ID of the zone. See <a href="https://developer.apple.com/documentation/cloudkit/ckrecordzone/1514917-zoneid"><code>CKRecordZone.ID</code></a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">zoneID</span><span class="p">:</span> <span class="kt">CKRecordZone</span><span class="o">.</span><span class="kt">ID</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertibleP13databaseScopeSo010CKDatabaseF0VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/databaseScope" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertibleP13databaseScopeSo010CKDatabaseF0VvpZ">databaseScope</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The database scope to sync. See <a href="https://developer.apple.com/documentation/cloudkit/ckdatabase/scope"><code>CKDatabase.Scope</code></a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">databaseScope</span><span class="p">:</span> <span class="kt">CKDatabase</span><span class="o">.</span><span class="kt">Scope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertibleP8recordIDSo0cF0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/recordID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertibleP8recordIDSo0cF0Cvp">recordID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique ID of the record. See <a href="https://developer.apple.com/documentation/cloudkit/ckrecord/id/1500975-init"><code>CKRecord.ID</code></a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">recordID</span><span class="p">:</span> <span class="kt">CKRecord</span><span class="o">.</span><span class="kt">ID</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertibleP6recordSo0C0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/record" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertibleP6recordSo0C0Cvp">record</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Cloud Kit record. See <a href="https://developer.apple.com/documentation/cloudkit/ckrecord"><code>CKRecord</code></a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">record</span><span class="p">:</span> <span class="kt">CKRecord</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertibleP9isDeletedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDeleted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertibleP9isDeletedSbvp">isDeleted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whethre is record is deleted.</p>
+
+<p>When you want to delete an object, you just need to set its isDeleted property to true and the rest of the things are already taken care of.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDeleted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Self%60:%20%60Object%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Self`: `Object`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Self%60:%20%60Object%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Self</code>: <code>Object</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream19CKRecordConvertiblePAA10RealmSwift6ObjectCRbzrlE8recordIDSo0cI0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/recordID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream19CKRecordConvertiblePAA10RealmSwift6ObjectCRbzrlE8recordIDSo0cI0Cvp">recordID</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>recordName : this is the unique identifier for the record, used to locate records on the database. We can create our own ID or leave it to CloudKit to generate a random UUID.
+For more: <a href="https://medium.com/@guilhermerambo/synchronizing-data-with-cloudkit-94c6246a3fda">https://medium.com/@guilhermerambo/synchronizing-data-with-cloudkit-94c6246a3fda</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">recordID</span><span class="p">:</span> <span class="kt">CKRecord</span><span class="o">.</span><span class="kt">ID</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/caiyue1993/IceCream" target="_blank" rel="external">caiyue1993</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

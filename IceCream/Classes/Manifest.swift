@@ -10,7 +10,9 @@ import Foundation
 /// This file is for setting some develop configs for IceCream framework.
 
 public class IceCream {
-    
+
+    // MARK: Singleton
+
     public static let shared = IceCream()
     
     /// There are quite a lot `print`s in the IceCream source files.

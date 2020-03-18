@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SyncObject Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/SyncObject" class="dashAnchor"></a>
+
+    <a title="SyncObject Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          IceCream Docs
+        </a>
+         (72% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">IceCream Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SyncObject Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CreamAsset.html">CreamAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IceCream.html">IceCream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SyncEngine.html">SyncEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SyncObject.html">SyncObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/IceCreamKey.html">IceCreamKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/IceCreamSubscription.html">IceCreamSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Notifications.html">Notifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CKRecordConvertible.html">CKRecordConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:8IceCream19CKRecordRecoverableP">CKRecordRecoverable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NotificationName.html">NotificationName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Syncable.html">Syncable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>SyncObject</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SyncObject</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Object</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CKRecordConvertible.html">CKRecordConvertible</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:8IceCream19CKRecordRecoverableP">CKRecordRecoverable</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SyncObject</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Syncable.html">Syncable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>SyncObject is for each model you want to sync.
+Logically,</p>
+
+<ol>
+<li>it takes care of the operations of CKRecordZone.</li>
+<li>it detects the changeSets of Realm Database and directly talks to it.</li>
+<li>it hands over to SyncEngine so that it can talk to CloudKit.</li>
+</ol>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream8SyncableP12pipeToEngineySaySo8CKRecordCG_SaySo0G2IDCGtcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pipeToEngine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream8SyncableP12pipeToEngineySaySo8CKRecordCG_SaySo0G2IDCGtcSgvp">pipeToEngine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pipeToEngine</span><span class="p">:</span> <span class="p">(([</span><span class="kt">CKRecord</span><span class="p">],</span> <span class="p">[</span><span class="kt">CKRecord</span><span class="o">.</span><span class="kt">ID</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">())?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC18realmConfiguration10RealmSwift0G0C0F0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/realmConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC18realmConfiguration10RealmSwift0G0C0F0Vvp">realmConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">realmConfiguration</span><span class="p">:</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Configuration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC18realmConfigurationACyxG10RealmSwift0G0C0F0V_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(realmConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC18realmConfigurationACyxG10RealmSwift0G0C0F0V_tcfc">init(realmConfiguration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">realmConfiguration</span><span class="p">:</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Configuration</span> <span class="o">=</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Configuration</span><span class="o">.</span><span class="n">defaultConfiguration</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Zone%20information"></a>
+                <a name="//apple_ref/swift/Section/Zone information" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Zone%20information"></a>
+                  <h3 class="section-name"><p>Zone information</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream8SyncableP10recordTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/recordType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream8SyncableP10recordTypeSSvp">recordType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">recordType</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC6zoneIDSo012CKRecordZoneF0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/zoneID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC6zoneIDSo012CKRecordZoneF0Cvp">zoneID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">zoneID</span><span class="p">:</span> <span class="kt">CKRecordZone</span><span class="o">.</span><span class="kt">ID</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream8SyncableP16zoneChangesTokenSo014CKServerChangeF0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/zoneChangesToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream8SyncableP16zoneChangesTokenSo014CKServerChangeF0CSgvp">zoneChangesToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">zoneChangesToken</span><span class="p">:</span> <span class="kt">CKServerChangeToken</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC19isCustomZoneCreatedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isCustomZoneCreated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC19isCustomZoneCreatedSbvp">isCustomZoneCreated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isCustomZoneCreated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC3add6recordySo8CKRecordC_tF"></a>
+                    <a name="//apple_ref/swift/Method/add(record:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC3add6recordySo8CKRecordC_tF">add(record:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">record</span><span class="p">:</span> <span class="kt">CKRecord</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC6delete8recordIDySo08CKRecordG0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/delete(recordID:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC6delete8recordIDySo08CKRecordG0C_tF">delete(recordID:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">recordID</span><span class="p">:</span> <span class="kt">CKRecord</span><span class="o">.</span><span class="kt">ID</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC21registerLocalDatabaseyyF"></a>
+                    <a name="//apple_ref/swift/Method/registerLocalDatabase()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC21registerLocalDatabaseyyF">registerLocalDatabase()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When you commit a write transaction to a Realm, all other instances of that Realm will be notified, and be updated automatically.
+For more: <a href="https://realm.io/docs/swift/latest/#writes">https://realm.io/docs/swift/latest/#writes</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerLocalDatabase</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream10SyncObjectC7cleanUpyyF"></a>
+                    <a name="//apple_ref/swift/Method/cleanUp()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream10SyncObjectC7cleanUpyyF">cleanUp()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cleanUp</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream8SyncableP26pushLocalObjectsToCloudKityyF"></a>
+                    <a name="//apple_ref/swift/Method/pushLocalObjectsToCloudKit()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream8SyncableP26pushLocalObjectsToCloudKityyF">pushLocalObjectsToCloudKit()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pushLocalObjectsToCloudKit</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/caiyue1993/IceCream" target="_blank" rel="external">caiyue1993</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

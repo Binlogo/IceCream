@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IceCream  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="IceCream  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          IceCream Docs
+        </a>
+         (72% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">IceCream Reference</a>
+      <img class="carat" src="img/carat.png" />
+      IceCream  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CreamAsset.html">CreamAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/IceCream.html">IceCream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SyncEngine.html">SyncEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SyncObject.html">SyncObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/IceCreamKey.html">IceCreamKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/IceCreamSubscription.html">IceCreamSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Notifications.html">Notifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CKRecordConvertible.html">CKRecordConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:8IceCream19CKRecordRecoverableP">CKRecordRecoverable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/NotificationName.html">NotificationName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Syncable.html">Syncable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <p><img src="https://i.loli.net/2017/11/18/5a104e5acfea5.png" alt="IceCream"></p>
+
+<p><a href="https://travis-ci.org/caiyue1993/IceCream"><img src="http://img.shields.io/travis/caiyue1993/IceCream.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/IceCream"><img src="https://img.shields.io/cocoapods/v/IceCream.svg?style=flat" alt="Version"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat"></a>
+<a href="http://cocoapods.org/pods/IceCream"><img src="https://img.shields.io/cocoapods/l/IceCream.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/IceCream"><img src="https://img.shields.io/cocoapods/p/IceCream.svg?style=flat" alt="Platform"></a></p>
+
+<p><a href="https://github.com/caiyue1993/icecream/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome"></a>
+<a href="https://twitter.com/caiyue5"><img src="https://img.shields.io/twitter/follow/caiyue5.svg?style=social"></a></p>
+
+<p>IceCream helps you sync Realm Database with CloudKit.</p>
+
+<blockquote>
+<p>It works like magic!</p>
+</blockquote>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li><p>Realm Database</p>
+
+<ul>
+<li>[x] Off-line First</li>
+<li>[x] Thread Safety</li>
+<li>[x] Reactive Programming</li>
+<li>[x] Optimized for mobile apps</li>
+<li>[x] Easy when migrating</li>
+</ul></li>
+<li><p>Apple CloudKit</p>
+
+<ul>
+<li>[x] Automatical Authentication</li>
+<li>[x] Silent Push</li>
+<li>[x] Free with limits(Private database consumes your user&rsquo;s iCloud quota)</li>
+</ul></li>
+<li><p>[x] Delta update</p></li>
+<li><p>[x] Reachability(Support Long-lived Operation) </p></li>
+<li><p>[x] Powerful Error Handling </p></li>
+<li><p>[x] Sync Automatically</p></li>
+<li><p>[x] Multiple object models support</p></li>
+<li><p>[x] Public/Private Database support</p></li>
+<li><p>[x] Large Data Syncing</p></li>
+<li><p>[x] Manually Synchronization is also supported</p></li>
+<li><p>[x] Many-to-one relationship support</p></li>
+<li><p>[x] Available on every Apple platform(iOS/macOS/tvOS/watchOS)</p></li>
+<li><p>[x] Support Realm Lists of Natural Types</p></li>
+<li><p>[x] Complete <a href="https://TO-SET-&-DEPLOY/IceCream">Documentation</a></p></li>
+</ul>
+<h2 id='prerequisite' class='heading'>Prerequisite</h2>
+
+<ol>
+<li>Be sure to have enrolled in Apple Developer Program</li>
+<li>Turn on your iCloud in Capabilities and choose <code>CloudKit</code></li>
+<li>Turn on Background Modes and check <code>Background fetch</code> and <code>Remote notification</code></li>
+</ol>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='basics' class='heading'>Basics</h3>
+
+<ol>
+<li>Prepare your Realm Objects (e.g. Dog, Cat&hellip;):</li>
+</ol>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
+    <span class="kd">@objc</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="kt">NSUUID</span><span class="p">()</span><span class="o">.</span><span class="n">uuidString</span>
+    <span class="kd">@objc</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="kd">@objc</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">age</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kd">@objc</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">isDeleted</span> <span class="o">=</span> <span class="kc">false</span>
+
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">AVATAR_KEY</span> <span class="o">=</span> <span class="s">"avatar"</span>
+    <span class="kd">@objc</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">avatar</span><span class="p">:</span> <span class="kt">CreamAsset</span><span class="p">?</span>
+
+    <span class="kd">@objc</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt">Person</span><span class="p">?</span> <span class="c1">// to-one relationships must be optional</span>
+
+    <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">primaryKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"id"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<ol>
+<li>Do stuff like this:</li>
+</ol>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">CKRecordConvertible</span> <span class="p">{</span>
+    <span class="c1">// Leave it blank if you are using private database</span>
+    <span class="c1">// For public database users, uncomment the following code:</span>
+    <span class="c1">// static var databaseScope: CKDatabase.Scope {</span>
+    <span class="c1">//     return .public</span>
+    <span class="c1">// } </span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">CKRecordRecoverable</span> <span class="p">{</span>
+    <span class="c1">// Leave it blank</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Is that easy? Protocol Extensions do this trick.</p>
+
+<ol>
+<li>Start the Engine!</li>
+</ol>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">syncEngine</span><span class="p">:</span> <span class="kt">SyncEngine</span><span class="p">?</span>
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="n">syncEngine</span> <span class="o">=</span> <span class="kt">SyncEngine</span><span class="p">(</span><span class="nv">objects</span><span class="p">:</span> <span class="p">[</span>
+            <span class="kt">SyncObject</span><span class="o">&lt;</span><span class="kt">Person</span><span class="o">&gt;</span><span class="p">(),</span>
+            <span class="kt">SyncObject</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">(),</span>
+            <span class="kt">SyncObject</span><span class="o">&lt;</span><span class="kt">Cat</span><span class="o">&gt;</span><span class="p">()</span>
+        <span class="p">],</span> <span class="nv">databaseScope</span><span class="p">:</span> <span class="o">.</span><span class="kd">private</span><span class="p">)</span>
+    <span class="n">application</span><span class="o">.</span><span class="nf">registerForRemoteNotifications</span><span class="p">()</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+
+<ol>
+<li>Listen for remote notifications</li>
+</ol>
+
+<blockquote>
+<p>The sample code in <a href="Example/IceCream_Example/AppDelegate.swift">AppDelegate</a> will be a good reference.</p>
+</blockquote>
+
+<p>That&rsquo;s all you need to do! Every time you write to Realm, the SyncEngine will get notified and handle sync stuff!</p>
+
+<p>For more details, clone the project to see the source code.</p>
+<h3 id='object-deletions' class='heading'>Object Deletions</h3>
+
+<p>Yep, we highly recommend you use <strong>Soft Deletions</strong>. That&rsquo;s why we add an <code>isDeleted</code> property to <code><a href="Protocols/CKRecordConvertible.html">CKRecordConvertible</a></code> protocol. </p>
+
+<p>When you want to delete an object, you just need to set its <code>isDeleted</code> property to true and the rest of the things are already taken care of.</p>
+
+<p><em>You also don&rsquo;t need to worry about cleaning-up things. It has also been considered.</em></p>
+<h3 id='how-about-syncing-asset' class='heading'>How about syncing asset?</h3>
+
+<p>Luckily, we have a perfect solution for syncing asset. 
+Absolutely, you could also store your image or kind of resource stuff as <code>Data</code> type and everything works fine. But Realm has a <a href="https://realm.io/docs/objc/latest/#current-limitations">16MB limit</a> of data property. And CloudKit encourages us to use <code>CKAsset</code> in places where the data you want to assign to a field is more than a few kilobytes in size.
+So taking the consideration of the above two, we recommend you to use <code><a href="Classes/CreamAsset.html">CreamAsset</a></code> property to hold data. <code><a href="Classes/CreamAsset.html">CreamAsset</a></code> will store local data on the file system and just save file paths in the Realm, all automatically. And we&rsquo;ll wrap things up to upload to CloudKit as <code>CKAsset</code>. </p>
+
+<p>An example project is provided to see the detailed usage.</p>
+<h3 id='relationships' class='heading'>Relationships</h3>
+
+<p>Thanks to the <a href="https://developer.apple.com/documentation/cloudkit/ckrecord/reference">CKReference</a> in the CloudKit, IceCream has supported many-to-one relationship nicely. As the <code>Dog</code> example shows, a dog may have an owner. And we&rsquo;ll wrap the owner up as CKReference and push them to the CloudKit. </p>
+
+<p>Inversely, the <code>Person</code> object has a <code>dogs</code> property which is the type of <code>LinkingObjects</code>. So we&rsquo;ve successfully supported to-many relationship with a nice workaround. All make sense.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+</li>
+<li>Swift 5</li>
+</ul>
+<h2 id='debug-suggestions' class='heading'>Debug Suggestions</h2>
+
+<p>It&rsquo;s true that debugging CloudKit is hard and tedious. But I have some tips for you guys when facing puzzles:</p>
+
+<ul>
+<li>You should know how Realm and CloudKit works.</li>
+<li>Using GUI tools, like <a href="https://itunes.apple.com/us/app/realm-browser/id1007457278?mt=12">Realm Browser</a> and <a href="https://icloud.developer.apple.com/dashboard">CloudKit Dashboard</a>.</li>
+<li>When you are lost and don&rsquo;t remember where you are, I suggest starting all over again. In CloudKit Dashboard, &ldquo;Reset&hellip;&rdquo; button is provided. You can also clear local database by re-install apps.</li>
+<li>By default, IceCream only prints some logs to your console in DEBUG mode. However, you could turn it off by adding <code>IceCream.shared.enableLogging = false</code> if it bothers you.</li>
+<li>Keep calm and carry on!</li>
+</ul>
+
+<p><em>Warning: If you&rsquo;re going to launch your app onto App Store, don&rsquo;t forget to deploy your environment settings to production. You can do it easily in the CloudKit Dashboard. Write &amp; Read permissions are also need to be considered.</em></p>
+<h3 id='one-more-tip' class='heading'>One More Tip</h3>
+
+<p>How to debug CloudKit in production mode? See this <a href="https://stackoverflow.com/questions/30182521/use-production-cloudkit-during-development">post</a>.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>Using Carthage or CocoaPods.</p>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager for Cocoa applications.</p>
+
+<p>To integrate IceCream into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "caiyue1993/IceCream"
+</code></pre>
+
+<p>Then, run the following command to build the frameworks:</p>
+<pre class="highlight shell"><code>carthage update
+</code></pre>
+
+<p>Normally, you&rsquo;ll get <strong>IceCream</strong>, <strong>Realm</strong> and <strong>RealmSwift</strong> frameworks. You need to set up your Xcode project manually to add these 3 frameworks.</p>
+
+<p>On your application targets’ <strong>General</strong> settings tab, in the <strong>Linked Frameworks and Libraries</strong> section, drag and drop each framework to use from the <code>Carthage/Build</code> folder on disk.</p>
+
+<p>On your application targets’ <strong>Build Phases</strong> settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:</p>
+<pre class="highlight shell"><code>/usr/local/bin/carthage copy-frameworks
+</code></pre>
+
+<p>and add the paths to the frameworks you want to use under “Input Files”(taking iOS platform for example):</p>
+<pre class="highlight plaintext"><code>$(SRCROOT)/Carthage/Build/iOS/IceCream.framework
+$(SRCROOT)/Carthage/Build/iOS/Realm.framework
+$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework
+</code></pre>
+
+<p>For more information about how to use Carthage, please see its <a href="https://github.com/Carthage/Carthage">project page</a>.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>IceCream is available through <a href="http://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'IceCream'</span>
+</code></pre>
+
+<blockquote>
+<p>If you want to build IceCream as a static framework, CocoaPods 1.4.0+ is required.</p>
+</blockquote>
+<h2 id='make-it-better' class='heading'>Make it better</h2>
+
+<p>This is the to-do list for the IceCream project. You can join us to become a contributor.</p>
+
+<ul>
+<li>[ ] CloudKit Shared Database</li>
+</ul>
+
+<p>See the <a href="docs/CONTRIBUTING.md">CONTRIBUTING</a> file for contributing guidelines.</p>
+<h2 id='live-demo' class='heading'>Live Demo</h2>
+
+<p>My app <a href="https://itunes.apple.com/cn/app/%E5%B0%8F%E7%9B%AE%E6%A0%87-%E9%87%8F%E5%8C%96%E4%BD%A0%E7%9A%84%E8%BF%9B%E6%AD%A5/id1215312957?mt=8&at=1000lvyQ">Sprint</a> (A lightweight task management app) is using IceCream. You can download it and try it on your multiple devices to see this magic.</p>
+
+<p><a href="https://itunes.apple.com/cn/app/%E5%B0%8F%E7%9B%AE%E6%A0%87-%E9%87%8F%E5%8C%96%E4%BD%A0%E7%9A%84%E8%BF%9B%E6%AD%A5/id1215312957?mt=8&at=1000lvyQ">
+  <img src="https://github.com/caiyue1993/Tiptoes/blob/master/images/appstore.png">
+</a></p>
+<h2 id='reference' class='heading'>Reference</h2>
+
+<ul>
+<li><a href="https://medium.com/@guilhermerambo/synchronizing-data-with-cloudkit-94c6246a3fda">Synchronizing data with CloudKit</a> (Recommended)</li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/231/">CloudKit Best Practices</a></li>
+<li><a href="https://academy.realm.io/posts/meetup-jp-simard-mastering-realm-notifications/">Mastering Realm Notifications</a></li>
+</ul>
+<h2 id='backers' class='heading'>Backers</h2>
+
+<p>By now, IceCream is mainly maintained by myself. I&rsquo;d be appreciated if you could be a backer to support the maintenance of IceCream. Thank you to all our backers! <a href="https://opencollective.com/icecream#backer">Become a backer</a></p>
+
+<p><a href="https://opencollective.com/icecream#backers" target="_blank"><img src="https://opencollective.com/icecream/backers.svg?width=890"></a></p>
+<h2 id='sponsors' class='heading'>Sponsors</h2>
+
+<p>Support this project by becoming a sponsor. Your logo will show up here with a link to your designated website. <a href="https://opencollective.com/icecream#sponsor">Become a sponsor</a></p>
+
+<p><a href="https://opencollective.com/icecream/sponsor/0/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/1/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/2/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/3/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/4/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/5/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/6/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/7/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/8/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/icecream/sponsor/9/website" target="_blank"><img src="https://opencollective.com/icecream/sponsor/9/avatar.svg"></a></p>
+<h2 id='contributors' class='heading'>Contributors</h2>
+
+<p>This project exists thanks to all the people who contribute. <a href="docs/CONTRIBUTING.md">Contribute</a>.</p>
+
+<p><a href="graphs/contributors"><img src="https://opencollective.com/IceCream/contributors.svg?width=890&button=false" /></a></p>
+<h2 id='donations' class='heading'>Donations</h2>
+
+<p>Now IceCream has been adopted by hundreds of developers and successfully used in their apps. We&rsquo;re greatly humbled by your enthusiam around the projects, and want to continue to move this project forward. Your financial support will encourge me to spend more time and provide better services.</p>
+
+<p><a href="https://paypal.me/yuecai"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" alt="paypal"></a></p>
+
+<p>Any amount you can donate today to help us reach our goal would be greatly appreciated.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>IceCream is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/caiyue1993/IceCream" target="_blank" rel="external">caiyue1993</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CreamAsset Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/CreamAsset" class="dashAnchor"></a>
+
+    <a title="CreamAsset Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          IceCream Docs
+        </a>
+         (72% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">IceCream Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      CreamAsset Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CreamAsset.html">CreamAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IceCream.html">IceCream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SyncEngine.html">SyncEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SyncObject.html">SyncObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/IceCreamKey.html">IceCreamKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/IceCreamSubscription.html">IceCreamSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Notifications.html">Notifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CKRecordConvertible.html">CKRecordConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:8IceCream19CKRecordRecoverableP">CKRecordRecoverable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NotificationName.html">NotificationName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Syncable.html">Syncable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>CreamAsset</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CreamAsset</span> <span class="p">:</span> <span class="kt">Object</span></code></pre>
+
+                </div>
+              </div>
+            <p>If you want to store and sync big data automatically, then using CreamAsset might be a good choice.</p>
+
+<p>According to Apple Document - <a href="https://developer.apple.com/documentation/cloudkit/ckasset">CKAsset</a> :</p>
+
+<blockquote>
+<p>&ldquo;You can also use assets in places where the data you want to assign to a field is more than a few kilobytes in size. &rdquo;</p>
+</blockquote>
+
+<p>And According to Realm - <a href="https://realm.io/docs/objc/latest/#current-limitations">Current limitations</a> :</p>
+
+<blockquote>
+<p>&ldquo;Data and String properties cannot hold data exceeding 16MB in size. To store larger amounts of data, either break it up into 16MB chunks or store it directly on the file system, storing paths to these files in the Realm. An exception will be thrown at runtime if your app attempts to store more than 16MB in a single property.&rdquo;</p>
+</blockquote>
+
+<p>We choose the latter, that&rsquo;s storing it directly on the file system, storing paths to these files in the Realm.
+So this is the deal.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@IceCream@objc(cs)CreamAsset(cm)ignoredProperties"></a>
+                    <a name="//apple_ref/swift/Method/ignoredProperties()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@IceCream@objc(cs)CreamAsset(cm)ignoredProperties">ignoredProperties()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Override this function to let Realm ignore <code>data</code> and <code><a href="../Classes/CreamAsset.html#/s:8IceCream0B5AssetC8filePath10Foundation3URLVvp">filePath</a></code> properties.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">ignoredProperties</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC10storedData10Foundation0E0VSgyF"></a>
+                    <a name="//apple_ref/swift/Method/storedData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC10storedData10Foundation0E0VSgyF">storedData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>There is an important point that we need to consider:
+Cuz we only store the path of data, so we can&rsquo;t access data by <code>data</code> property
+So use this method if you want get the data of this object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">storedData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC8filePath10Foundation3URLVvp"></a>
+                    <a name="//apple_ref/swift/Property/filePath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC8filePath10Foundation3URLVvp">filePath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The file path of <code>CreamAsset</code>. See <code>creamAssetDefaultURL</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">filePath</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC6create6object8propName4data15shouldOverwriteACSgAA19CKRecordConvertible_p_SS10Foundation4DataVSbtFZ"></a>
+                    <a name="//apple_ref/swift/Method/create(object:propName:data:shouldOverwrite:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC6create6object8propName4data15shouldOverwriteACSgAA19CKRecordConvertible_p_SS10Foundation4DataVSbtFZ">create(object:propName:data:shouldOverwrite:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new CreamAsset for the given object with Data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CKRecordConvertible.html">CKRecordConvertible</a></span><span class="p">,</span> <span class="nv">propName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">shouldOverwrite</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CreamAsset</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object the asset will live on</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique property name to identify this asset. e.g.: Dog Object may have multiple CreamAsset properties, so we need unique <code>propName</code>s to identify these.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldOverwrite</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to try and save the file even if an existing file exists for the same object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A CreamAsset if it was successful</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC6create8objectID8propName4data15shouldOverwriteACSgSS_SS10Foundation4DataVSbtFZ"></a>
+                    <a name="//apple_ref/swift/Method/create(objectID:propName:data:shouldOverwrite:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC6create8objectID8propName4data15shouldOverwriteACSgSS_SS10Foundation4DataVSbtFZ">create(objectID:propName:data:shouldOverwrite:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new CreamAsset for the given object id with Data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">objectID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">propName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">shouldOverwrite</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CreamAsset</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objectID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The objectID (key property of the Realm object) the asset will be identified by</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique property name to identify this asset. e.g.: Dog Object may have multiple CreamAsset properties, so we need unique <code>propName</code>s to identify these.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldOverwrite</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to try and save the file even if an existing file exists for the same object ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A CreamAsset if it was successful</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC6create6object8propName3urlACSgAA19CKRecordConvertible_p_SS10Foundation3URLVtFZ"></a>
+                    <a name="//apple_ref/swift/Method/create(object:propName:url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC6create6object8propName3urlACSgAA19CKRecordConvertible_p_SS10Foundation3URLVtFZ">create(object:propName:url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new CreamAsset for the given object with a URL</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CKRecordConvertible.html">CKRecordConvertible</a></span><span class="p">,</span> <span class="nv">propName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CreamAsset</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object the asset will live on</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique property name to identify this asset. e.g.: Dog Object may have multiple CreamAsset properties, so we need unique <code>propName</code>s to identify these.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL of the file to store. Any path extension on the file (e.g. &ldquo;mov&rdquo;) will be maintained</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A CreamAsset if it was successful</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC05creamC10DefaultURL10Foundation0F0VyFZ"></a>
+                    <a name="//apple_ref/swift/Method/creamAssetDefaultURL()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC05creamC10DefaultURL10Foundation0F0VyFZ">creamAssetDefaultURL()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default path for the storing of CreamAsset. That is:
+xxx/Document/CreamAsset/</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">creamAssetDefaultURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC05creamC10FilesPathsSaySSGyFZ"></a>
+                    <a name="//apple_ref/swift/Method/creamAssetFilesPaths()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC05creamC10FilesPathsSaySSGyFZ">creamAssetFilesPaths()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch all CreamAsset files&rsquo; path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">creamAssetFilesPaths</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IceCream0B5AssetC06deletebC4File4withySS_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/deleteCreamAssetFile(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IceCream0B5AssetC06deletebC4File4withySS_tFZ">deleteCreamAssetFile(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When delete an object. We need to delete related CreamAsset files</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">deleteCreamAssetFile</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/caiyue1993/IceCream" target="_blank" rel="external">caiyue1993</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

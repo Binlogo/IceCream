@@ -11,10 +11,13 @@ import Realm
 import CloudKit
 
 /// If you want to store and sync big data automatically, then using CreamAsset might be a good choice.
-/// According to Apple https://developer.apple.com/documentation/cloudkit/ckasset :
-/// "You can also use assets in places where the data you want to assign to a field is more than a few kilobytes in size. "
-/// And According to Realm https://realm.io/docs/objc/latest/#current-limitations :
-/// "Data and String properties cannot hold data exceeding 16MB in size. To store larger amounts of data, either break it up into 16MB chunks or store it directly on the file system, storing paths to these files in the Realm. An exception will be thrown at runtime if your app attempts to store more than 16MB in a single property."
+///
+/// According to Apple Document - [CKAsset](https://developer.apple.com/documentation/cloudkit/ckasset) :
+/// > "You can also use assets in places where the data you want to assign to a field is more than a few kilobytes in size. "
+///
+/// And According to Realm - [Current limitations](https://realm.io/docs/objc/latest/#current-limitations) :
+/// > "Data and String properties cannot hold data exceeding 16MB in size. To store larger amounts of data, either break it up into 16MB chunks or store it directly on the file system, storing paths to these files in the Realm. An exception will be thrown at runtime if your app attempts to store more than 16MB in a single property."
+///
 /// We choose the latter, that's storing it directly on the file system, storing paths to these files in the Realm.
 /// So this is the deal.
 public class CreamAsset: Object {

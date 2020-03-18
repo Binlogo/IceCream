@@ -9,14 +9,27 @@ import Foundation
 import CloudKit
 import RealmSwift
 
+/// The protocol for Realm's Object to convert to CKRecord.
 public protocol CKRecordConvertible {
+
+    /// The Realm object type of the record
     static var recordType: String { get }
+
+    /// The unique ID of the zone. See [`CKRecordZone.ID`](https://developer.apple.com/documentation/cloudkit/ckrecordzone/1514917-zoneid)
     static var zoneID: CKRecordZone.ID { get }
+
+    /// The database scope to sync. See [`CKDatabase.Scope`](https://developer.apple.com/documentation/cloudkit/ckdatabase/scope).
     static var databaseScope: CKDatabase.Scope { get }
-    
+
+    /// The unique ID of the record. See [`CKRecord.ID`](https://developer.apple.com/documentation/cloudkit/ckrecord/id/1500975-init)
     var recordID: CKRecord.ID { get }
+
+    /// The Cloud Kit record. See [`CKRecord`](https://developer.apple.com/documentation/cloudkit/ckrecord)
     var record: CKRecord { get }
 
+    /// Whethre is record is deleted.
+    ///
+    /// When you want to delete an object, you just need to set its isDeleted property to true and the rest of the things are already taken care of.
     var isDeleted: Bool { get }
 }
 

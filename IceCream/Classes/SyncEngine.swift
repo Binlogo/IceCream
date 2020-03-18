@@ -16,7 +16,15 @@ import CloudKit
 public final class SyncEngine {
     
     private let databaseManager: DatabaseManager
-    
+
+    // MARK: Initializers
+
+    /// Create SyncEngin with syncables of Realm.Object
+    /// - Parameters:
+    ///   - objects: Array of Syncable of Realm object to sync with iCloud.
+    ///   - databaseScope: Cloud Kit database scope. See [`CKDatabase.Scope`](https://developer.apple.com/documentation/cloudkit/ckdatabase/scope).
+    ///   - container: Cloud Kit Container. See [`CKContainer`](https://developer.apple.com/documentation/cloudkit/ckcontainer).
+
     public convenience init(objects: [Syncable], databaseScope: CKDatabase.Scope = .private, container: CKContainer = .default()) {
         switch databaseScope {
         case .private:
@@ -83,10 +91,13 @@ extension SyncEngine {
     
 }
 
+/// The IceCream notifications
 public enum Notifications: String, NotificationName {
+    /// Cloud Kit data did change remotely
     case cloudKitDataDidChangeRemotely
 }
 
+/// The IceCream notification info key
 public enum IceCreamKey: String {
     /// Tokens
     case databaseChangesTokenKey

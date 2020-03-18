@@ -8,6 +8,7 @@
 import CloudKit
 import RealmSwift
 
+/// The protocol for Realm's Object to recover from CKRecord.
 public protocol CKRecordRecoverable {
     
 }
